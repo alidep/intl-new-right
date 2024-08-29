@@ -113,6 +113,9 @@ line-height: .75;}
 .section{
 	text-align:center;
 	tabindex:1;
+    box-sizing: border-box;
+}
+
 }
 #menu li {
 	display:inline-block;
