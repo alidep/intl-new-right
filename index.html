@@ -91,27 +91,7 @@ iframe {
     background-color: #F2F2F2;
 }
 
-    /* Fixed 
-     and footer.
-    * --------------------------------------- */
-    #header, #footer{
-        position:fixed;
-        height: 50px;
-        display:block;
-        width: 100%;
-        background: #333;
-        z-index:9;
-        text-align:center;
-        color: #f2f2f2;
-        padding: 20px 0 0 0;
-    }
 
-    #header{
-        top:0px;
-    }
-    #footer{
-        bottom:0px;
-    }
 
 
     /* Layer with position absolute in order to have it over the video
@@ -138,9 +118,126 @@ iframe {
     }
 
 
+/* Style the header */
+/* Base styles for the header */
+#main-header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.header-left h1 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    color: #f2f2f2;
+}
 
+.header-center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-center ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.header-center ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+}
+
+.header-center ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the button on the right */
+.header-right .explore-button {
+font-family: "Volkhov", serif;
+color:#ffffff;
+font-size: 16px;
+font-weight: 500;
+
+border-width: 0px;
+width: 200px;
+height: 40px;
+border-radius: 30px;
+background: #B80F0F;
+
+box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+#B80F0F
+}
+
+.header-right .explore-button:hover {
+background: #D24B4B;
+}
+}
+
+/* Push the content down to avoid overlapping */
+#fullpage {
+    margin-top: 80px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-center ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-right {
+        margin-top: 10px;
+    }
+}
 
 
     /* Bottom menu
@@ -173,6 +270,35 @@ iframe {
 <body>
 
 
+<header id="main-header">
+    <div class="header-content">
+        <div class="header-left">
+            <h1>Exploring the New Right</h1>
+        </div>
+        <nav class="header-center">
+            <ul>
+                <li><a href="#section0">Home</a></li>
+                <li><a href="#section1">Introduction</a></li>
+                <li><a href="#section2">Anti-Woke</a></li>
+                <li><a href="#section3">Video</a></li>
+                <li class="dropdown">
+                    <a href="#section4" class="dropbtn">Trends</a>
+                    <div class="dropdown-content">
+                        <a href="#trend1">Anti-Globalism</a>
+                        <a href="#trend2">Anti-Elites</a>
+                        <a href="#trend3">Anti-Woke</a>
+                        <a href="#trend4">Xenophobia / Racism</a>
+                        <a href="#trend5">Traditional Values</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <button class="explore-button">Explore the Map</button>
+        </div>
+    </div>
+</header>
+
 <div id="fullpage">
 	   <div class="section active" id="section0">
             <div class="textstandard"><p style="font-size:24px;padding-bottom: 10px;">The Rise of the</p> <h1>‘Nationalist International’</h1></br></br>
@@ -192,10 +318,14 @@ iframe {
 	<div class="section" id="section1">
 <div class="textstandard">
                <div class="subtitle">Anti-Globalists go Global</div>
-                <p class="newspaper"><span class="firstletter">T</span>he global rise of new right-wing movements has been marked by anti-globalist, anti-establishment, nationalist, racist and xenophobic rhetoric combined with traditional values, evident in countries like India, across Europe, Brazil, the United States, and Argentina. Even in places where these movements are not currently in power, their influence has shifted political norms rightward, with extreme-right views being increasingly adopted by mainstream parties. The academic debate continues over how to accurately define this phenomenon, with terms like neofascism, post-fascism, and radical right being proposed, though some scholars argue for new labels such as "neopatriots" or "extreme-right 2.0." Despite their nationalist focus, and many contradictions, these movements share a remarkably consistent international ideology, opposing common enemies like globalism, socialism, gender ideology and wokeness, and some scholars argue that the global character of these movements is one thing that distinguishes them from past right-wing movements with culture wars increasingly transcending national boundaries.</p>  
+                <p class="newspaper"><span class="firstletter">T</span>he global surge of right-wing movements has been marked by a blend of anti-globalist, anti-establishment, nationalist, racist, and xenophobic rhetoric, all wrapped in a veneer of traditional values. From India to Europe, Brazil, the United States, and Argentina, these movements are shifting political landscapes, pushing extreme-right ideologies into the mainstream. Even in places where they haven’t seized power, their influence is unmistakable. Political norms are skewing rightward, with once-fringe views increasingly embraced by mainstream parties.
+</br></br>
+The academic world is still wrestling with how to label this phenomenon, some using terms like neofascism, post-fascism, and radical right, while others suggest new labels like 'neopatriots' or 'extreme-right 2.0.' Despite their nationalist focus, these movements share a strikingly uniform international ideology. They rally against common enemies: globalism, socialism, gender ideology, and what they derisively term 'wokeness.'
+</br></br>
+As these 'culture wars' spill over national borders, some scholars argue that it is the global nature of these movements that marks them as distinct from past iterations of right-wing extremism."</p>  
                 </div>
 	</div>
-    <div class="section" id="section1">
+    <div class="section" id="section2">
 <div class="textstandard">
                <div class="subtitle">Trends</div>
 Trends
@@ -205,7 +335,80 @@ Anti-Globalism, Anti-Elites, Anti-Woke, Xenophobia / Racism
                 </br></br></br>
 </div></div>
 
-	<div class="section" id="section2">
+	<div class="section" id="section3">
+
+<div class="textstandard">
+         <div class="subtitle">Anti-Globalism</div>
+<p class="newspaper"><span class="firstletter">A</span> nti-globalism is a cornerstone of this new right ideology, rooted in the belief that globalization erodes national sovereignty, destroys local cultures, and enriches global elites at the expense of ordinary citizens. New right movements tend to argue that global institutions and agreements, such as the United Nations and trade deals, undermine the ability of nations to govern themselves according to their own values and interests. This anti-globalist sentiment is often accompanied by calls to withdraw from international organizations, reassert control over borders, and prioritize national interests over global cooperation. Global managers 
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="slide active" id="slide1">
+            <div class="intro">
+                <h1>Slide 2.1</h1>
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <div class="intro">
+                <h1>Slide 2.2</h1>
+                <p>
+                    We are using the class `active` on this section and in this particular horizontal slide. This way it will appear on the viewport on page load, instead of the 1st section 1st slide.
+                </p>
+                <p>You can apply the same logic to horizontal slides</p>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Slide 2.3</h1>
+                  <p>
+                    We are using the class `active` on this section and in this particular horizontal slide. This way it will appear on the viewport on page load, instead of the 1st section 1st slide.
+                </p>
+                <p>You can apply the same logic to horizontal slides</p>
+        </div>
+  </div>
+
+
+    <div class="section " id="section3">
+        <video id="myVideo" loop controls="false" data-autoplay playsinline>
+            <source src="examples/imgs/Wokeness.mp4" type="video/mp4">
+            <source src="examples/imgs/flowers.webm" type="video/webm">
+        </video>
+    </div>
+
+
+    <div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">A</span> cross the globe, new right movements have turned 'wokeism' into their favorite punching bag—a catch-all slur for anything remotely progressive. What started as 'Stay Woke,' a rallying cry from Black American communities during the Civil Rights Movement, meant to keep folks vigilant about racial and social injustices, has been twisted into a broadside against causes like racial justice, gender equality, and social equity.
+</br></br>
+
+The term 'woke' got a new lease on life in the 2010s, thanks to Black Lives Matter activists, expanding beyond race to spotlight issues around gender and other marginalized identities. It caught on with millennials and Gen Z, spreading far and wide, and even landing a spot in the Oxford English Dictionary in 2017. But as its global reach grew, so did the backlash—transforming 'woke' from a badge of awareness into a buzzword for the culture wars.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="examples/imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="examples/imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
+    </div>
+</div>
+  </div>
+
+
+    <div class="section" id="section2">
 
 <div class="textstandard">
          <div class="subtitle">Anti Woke</div>
@@ -236,12 +439,170 @@ The term "woke" gained traction again in the 2010s, expanding its scope beyond r
   </div>
 
 
-    <div class="section " id="section3">
-        <video id="myVideo" loop controls="false" data-autoplay playsinline>
-            <source src="examples/imgs/Wokeness.mp4" type="video/mp4">
-            <source src="examples/imgs/flowers.webm" type="video/webm">
-        </video>
+    <div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">N</span> ew right movements across the globe have vehemently positioned themselves against "wokeism," a term that has evolved from a critique of social justice activism into a broader condemnation of progressive movements focused on racial justice, gender equality, and social equity. "Stay Woke" originated in Black American communities to signify awareness of racial and social injustices, particularly during the Civil Rights Movement. It later gained broader usage to express solidarity with marginalized groups and highlight awareness of systemic oppression.  </br></br>
+
+The term "woke" gained traction again in the 2010s, expanding its scope beyond race to encompass issues related to gender and other marginalized identities. It was popularized by Black Lives Matter (BLM) activists, and it was increasingly adopted more widely, especially with millennials and Gen Z. As its usage became more widespread globally, "woke" was added to the Oxford English Dictionary in 2017.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+</br></br>
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="examples/imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="examples/imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
     </div>
+</div>
+  </div>
+
+
+    <div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">N</span> ew right movements across the globe have vehemently positioned themselves against "wokeism," a term that has evolved from a critique of social justice activism into a broader condemnation of progressive movements focused on racial justice, gender equality, and social equity. "Stay Woke" originated in Black American communities to signify awareness of racial and social injustices, particularly during the Civil Rights Movement. It later gained broader usage to express solidarity with marginalized groups and highlight awareness of systemic oppression.  </br></br>
+
+The term "woke" gained traction again in the 2010s, expanding its scope beyond race to encompass issues related to gender and other marginalized identities. It was popularized by Black Lives Matter (BLM) activists, and it was increasingly adopted more widely, especially with millennials and Gen Z. As its usage became more widespread globally, "woke" was added to the Oxford English Dictionary in 2017.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+</br></br>
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="examples/imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="examples/imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
+    </div>
+</div>
+  </div>
+
+
+    <div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">N</span> ew right movements across the globe have vehemently positioned themselves against "wokeism," a term that has evolved from a critique of social justice activism into a broader condemnation of progressive movements focused on racial justice, gender equality, and social equity. "Stay Woke" originated in Black American communities to signify awareness of racial and social injustices, particularly during the Civil Rights Movement. It later gained broader usage to express solidarity with marginalized groups and highlight awareness of systemic oppression.  </br></br>
+
+The term "woke" gained traction again in the 2010s, expanding its scope beyond race to encompass issues related to gender and other marginalized identities. It was popularized by Black Lives Matter (BLM) activists, and it was increasingly adopted more widely, especially with millennials and Gen Z. As its usage became more widespread globally, "woke" was added to the Oxford English Dictionary in 2017.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+</br></br>
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="examples/imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="examples/imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
+    </div>
+</div>
+  </div>
+
+    <div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">N</span> ew right movements across the globe have vehemently positioned themselves against "wokeism," a term that has evolved from a critique of social justice activism into a broader condemnation of progressive movements focused on racial justice, gender equality, and social equity. "Stay Woke" originated in Black American communities to signify awareness of racial and social injustices, particularly during the Civil Rights Movement. It later gained broader usage to express solidarity with marginalized groups and highlight awareness of systemic oppression.  </br></br>
+
+The term "woke" gained traction again in the 2010s, expanding its scope beyond race to encompass issues related to gender and other marginalized identities. It was popularized by Black Lives Matter (BLM) activists, and it was increasingly adopted more widely, especially with millennials and Gen Z. As its usage became more widespread globally, "woke" was added to the Oxford English Dictionary in 2017.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+</br></br>
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="examples/imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="examples/imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
+    </div>
+</div>
+  </div>
+
+    <div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">N</span> ew right movements across the globe have vehemently positioned themselves against "wokeism," a term that has evolved from a critique of social justice activism into a broader condemnation of progressive movements focused on racial justice, gender equality, and social equity. "Stay Woke" originated in Black American communities to signify awareness of racial and social injustices, particularly during the Civil Rights Movement. It later gained broader usage to express solidarity with marginalized groups and highlight awareness of systemic oppression.  </br></br>
+
+The term "woke" gained traction again in the 2010s, expanding its scope beyond race to encompass issues related to gender and other marginalized identities. It was popularized by Black Lives Matter (BLM) activists, and it was increasingly adopted more widely, especially with millennials and Gen Z. As its usage became more widespread globally, "woke" was added to the Oxford English Dictionary in 2017.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+</br></br>
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="examples/imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="examples/imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
+    </div>
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="section" id="section4">
         <div class="iframe-container">
 <iframe src="https://alidep.github.io/reddit-terms/" style="border:none;" title="Iframe Example"></iframe>
