@@ -362,3 +362,9 @@ line-height: .75;}
 .samplesimgs{
 	display: inline-block;
 }
+
+.quote-new{
+	font-family: "work sans";
+	text-align: left;
+	font-size: 18px;
+}

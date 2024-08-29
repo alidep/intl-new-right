@@ -356,12 +356,12 @@ p.newspaper{
     align-items: center;
     padding: 20px;
     margin-top: 10px;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .image-box {
 
-    max-width: 35%;
+    max-width: 45%;
 }
 
 .side-image {
@@ -380,6 +380,131 @@ p.newspaper{
 }
 
 
+.distinct-image-container {
+    width: 300px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    overflow: hidden; /* Hide the overflow */
+    position: relative;
+    margin: auto;
+    border: 2px solid #333; /* Optional: Add a border */
+}
+
+.distinct-image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Ensure the image covers the container */
+    height: auto;
+}
+
+
+.custom-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.custom-image-side {
+    flex: 1;
+    padding: 0px;
+}
+
+.custom-image-side img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-text-side {
+    flex: 1;
+    padding: 50px;
+
+}
+
+.custom-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Work Sans', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h2 {
+ font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+        color: #fff;
+}
+
+.footer-section p {
+    font-size: 14px;
+        color: #fff;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+        color: #fff;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+          color: #fff;
+}
+
+.social-icon {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #B80F0F; /* Same color as the button in the header */
+}
+
+.footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
 
 
 
