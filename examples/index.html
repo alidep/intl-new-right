@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>The New Right Around the World</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/86a1d15f3b.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
+
+
+<style type="text/css">
+    /* Style for our header texts
+    * --------------------------------------- */
+
+
+    p{
+font-family: "Work Sans", sans-serif;
+font-size: 1em;
+    }
+
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+        overflow: hidden;
+    }
+
+    #myVideo{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-color: black; /* in case the video doesn't fit the whole page*/
+        background-image: /* our video */;
+        background-position: center center;
+        background-size: contain;
+        object-fit: cover; /*cover video background */
+        z-index:3;
+    }
+
+
+    #myVideo{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-color: black; /* in case the video doesn't fit the whole page*/
+        background-image: /* our video */;
+        background-position: center center;
+        background-size: contain;
+        object-fit: cover; /*cover video background */
+        z-index:0;
+    }
+
+
+
+iframe {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    border: none;
+    background-color: #E6E8D4;
+}
+
+#section0{
+    background-image: url(imgs/COVER.PNG);
+    padding: 6% 0 0 0;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+#section2{
+    background-color: #F2F2F2;
+}
+
+    /* Fixed 
+     and footer.
+    * --------------------------------------- */
+    #header, #footer{
+        position:fixed;
+        height: 50px;
+        display:block;
+        width: 100%;
+        background: #333;
+        z-index:9;
+        text-align:center;
+        color: #f2f2f2;
+        padding: 20px 0 0 0;
+    }
+
+    #header{
+        top:0px;
+    }
+    #footer{
+        bottom:0px;
+    }
+
+
+    /* Layer with position absolute in order to have it over the video
+    * --------------------------------------- */
+    #section3 .layer{
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        left: 0;
+        top: 43%;
+
+        /*
+        * Preventing flicker on some browsers
+        * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+        */
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    /*solves problem with overflowing video in Mac with Chrome */
+    #section3{
+        overflow: hidden;
+    }
+
+
+
+
+
+
+
+    /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu li a {
+        color: #fff;
+    }
+
+
+    /* Hiding video controls
+    * See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+    * --------------------------------------- */
+    /*video::-webkit-media-controls {
+      display:none !important;
+
+
+
+
+    }
+
+
+
+</style>
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->    
+</head>
+<body>
+
+
+<div id="fullpage">
+	   <div class="section active" id="section0">
+            <div class="textstandard"><p style="font-size:24px;padding-bottom: 10px;">The Rise of the</p> <h1>‘Nationalist International’</h1></br></br>
+                <p style="font-family: work sans; font-size:24px;">Tracking the rise of the new right worldwide, and exploring it’s global interconnectedness.</p>
+            </br></br></br>
+                <button>Explore the Map</button></br>
+                </br>
+                <p>or</p>
+                </br>
+                <p>Explore Trends</p>
+            </br></br>
+                <i class="fa-solid fa-arrow-down"></i>
+                </br></br></br>
+            </div>
+       </div>
+
+	<div class="section" id="section1">
+<div class="textstandard">
+               <div class="subtitle">Anti-Globalists go Global</div>
+                <p class="newspaper"><span class="firstletter">T</span>he global rise of new right-wing movements has been marked by anti-globalist, anti-establishment, nationalist, racist and xenophobic rhetoric combined with traditional values, evident in countries like India, across Europe, Brazil, the United States, and Argentina. Even in places where these movements are not currently in power, their influence has shifted political norms rightward, with extreme-right views being increasingly adopted by mainstream parties. The academic debate continues over how to accurately define this phenomenon, with terms like neofascism, post-fascism, and radical right being proposed, though some scholars argue for new labels such as "neopatriots" or "extreme-right 2.0." Despite their nationalist focus, and many contradictions, these movements share a remarkably consistent international ideology, opposing common enemies like globalism, socialism, gender ideology and wokeness, and some scholars argue that the global character of these movements is one thing that distinguishes them from past right-wing movements with culture wars increasingly transcending national boundaries.</p>  
+                </div>
+	</div>
+    <div class="section" id="section1">
+<div class="textstandard">
+               <div class="subtitle">Trends</div>
+Trends
+Anti-Globalism, Anti-Elites, Anti-Woke, Xenophobia / Racism
+            </br></br>Anti-Marxist, Traditional Values, Political Incorrectness, Climate Change, Rejection of Economic Order, Nativism, 
+                <i class="fa-solid fa-arrow-down"></i>
+                </br></br></br>
+</div></div>
+
+	<div class="section" id="section2">
+
+<div class="textstandard">
+         <div class="subtitle">Anti Woke</div>
+<p class="newspaper"><span class="firstletter">N</span> ew right movements across the globe have vehemently positioned themselves against "wokeism," a term that has evolved from a critique of social justice activism into a broader condemnation of progressive movements focused on racial justice, gender equality, and social equity. "Stay Woke" originated in Black American communities to signify awareness of racial and social injustices, particularly during the Civil Rights Movement. It later gained broader usage to express solidarity with marginalized groups and highlight awareness of systemic oppression.  </br></br>
+
+The term "woke" gained traction again in the 2010s, expanding its scope beyond race to encompass issues related to gender and other marginalized identities. It was popularized by Black Lives Matter (BLM) activists, and it was increasingly adopted more widely, especially with millennials and Gen Z. As its usage became more widespread globally, "woke" was added to the Oxford English Dictionary in 2017.
+    </p>
+</div>
+</div>
+
+  <div class="section">
+<div class="textstandard">
+<p>'Woke' eventually became co-opted to symbolize perceived excesses of political correctness. This framing presents wokeism as a dire threat to traditional values, national identity, and free speech. The term has transcended its origins, spreading globally as a pejorative. In China, for instance, the term "baizuo," meaning "white left," is used similarly to criticize perceived Western liberalism and social justice advocacy. This global spread of the concept of wokeism has enabled far-right groups to unite diverse factions under a common cause of resisting what they see as leftist cultural dominance, framing their opposition as a defense of national and cultural integrity against foreign and domestic progressive ideologies.
+</br></br>
+
+    </p>
+     <div class="image-container">
+        <div class="image-box">
+            <img src="imgs/awakenotwoke.webp" alt="Awake Not Woke" class="side-image">
+              <div class="image-description">Awake Not Woke - CPAC Florida 2022.</div>
+        </div>
+        <div class="image-box">
+            <img src="imgs/wokebusters.jpg" alt="Wokebusters" class="side-image">
+            <div class="image-description">Wokebusters - CPAC Hungary 2024</div>
+        </div>
+    </div>
+</div>
+  </div>
+
+
+    <div class="section " id="section3">
+        <video id="myVideo" loop controls="false" data-autoplay playsinline>
+            <source src="imgs/Wokeness.mp4" type="video/mp4">
+            <source src="imgs/flowers.webm" type="video/webm">
+        </video>
+    </div>
+	<div class="section" id="section4">
+        <div class="iframe-container">
+<iframe src="https://alidep.github.io/reddit-terms/" style="border:none;" title="Iframe Example"></iframe>
+
+</div>
+       
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+		sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+	});
+
+
+iFrameResize({
+        log: false, // Enable logging for debugging
+        scrolling: 'omit', // Allow scrolling inside the iframe
+        checkOrigin: false, // Disable origin checks for simplicity (be cautious with this in production)
+    }, '#iframe-example');
+</script>
+</body>
+</html>
