@@ -9,21 +9,20 @@ FP.fitToSection = fitToSection;
 /**
 * Sets fitToSection
 */
-export function setFitToSection(value, type){
+   //* export function setFitToSection(value, type){
     setVariableState('fitToSection', value, type);
-}
-
+   //* 
 /**
 * Fits the site to the nearest active section
 */
-export function fitToSection(){
+//*export function fitToSection(){
     //checking fitToSection again in case it was set to false before the timeout delay
-    if(state.canScroll && getOptions().fitToSection){
+   //* if(state.canScroll && getOptions().fitToSection){
         //allows to scroll to an active section and
         //if the section is already active, we prevent firing callbacks
-        setState({isResizing: true});
+    //*    setState({isResizing: false});
 
-        scrollPage(state.activeSection);
-        setState({isResizing: false});
-    }
-}
+     //*   scrollPage(state.activeSection);
+     //*   setState({isResizing: false});
+     //*   }
+   //* }

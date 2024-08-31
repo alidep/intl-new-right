@@ -1,3 +1,9 @@
+
+
+
+
+
+
 import * as utils from './common/utils.js';
 import { silentScroll } from './common/silentScroll.js';
 import { getScrollSettings } from './common/utilsFP.js';
@@ -19,6 +25,9 @@ FP.test.setAutoScrolling = setAutoScrolling;
 * Sets the autoScroll option.
 * It changes the scroll bar visibility and the history of the site as a result.
 */
+
+
+
 export function setAutoScrolling(value, type){
     //removing the transformation
     if(!value){
@@ -72,3 +81,4 @@ export function setAutoScrolling(value, type){
         }
     }
 }
+

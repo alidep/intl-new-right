@@ -167,12 +167,12 @@
       shared: {}
     };
     var extensions = ['parallax', 'scrollOverflowReset', 'dragAndMove', 'offsetSections', 'fadingEffect', 'responsiveSlides', 'continuousHorizontal', 'interlockedSlides', 'scrollHorizontally', 'resetSliders', 'cards', 'dropEffect', 'waterEffect'];
-    var isInsideIframe = function () {
-      var inIframe = window.self !== window.top;
-      return function () {
-        return inIframe;
-      };
-    }();
+  //*  var isInsideIframe = function () {
+       //*  var inIframe = window.self !== window.top;
+      //*   return function () {
+      //*     return inIframe;
+      //*   };
+     //*  }();
 
     /**
     * forEach polyfill for IE
@@ -1137,7 +1137,7 @@
       css3: true,
       scrollingSpeed: 700,
       autoScrolling: false,
-      fitToSection: true,
+      fitToSection: false,
       fitToSectionDelay: 600,
       easing: 'easeInOutCubic',
       easingcss3: 'ease',
@@ -1153,7 +1153,7 @@
       resetSliders: false,
       fadingEffect: false,
       normalScrollElements: null,
-      scrollOverflow: true,
+      scrollOverflow: false,
       scrollOverflowReset: false,
       skipIntermediateItems: false,
       touchSensitivity: 5,
